@@ -93,6 +93,40 @@ bool person_inside
 bool private_mode
 bool fan_running
 ```
+---
+
+# Software
+
+```C
+/* some more stuff above */
+
+void app_config_update(void)
+{
+  uint32_t t = config_get_uint(CONFIG_TEMPERATURE_RECEIVER_TARGET_NODE_ID);
+  setReceiverTarget(t);
+  wallTemperatureFactor = config_get_uint(CONFIG_WALL_TEMPERATURE_FACTOR_BY_1024);
+  firstAlarmAfter = TIME_S2I(config_get_uint(CONFIG_HUMIDITY_ALARM_FIRST_AFTER_S));
+  repeatAlarmEvery = TIME_S2I(config_get_uint(CONFIG_HUMIDITY_ALARM_REPEAT_INTERVAL_S));
+}
+
+void app_init(void)
+{
+  tone_init();
+  bme280_app_init();
+}
+
+void app_fast_tick(void)
+{
+  melody_tick();
+}
+
+void app_tick(void)
+{
+  bme280_app_read();
+  humidity_alarm_tick();
+}
+```
+
 
 ---
 
