@@ -11,6 +11,35 @@ class: center
 
 ---
 
+# home automation / smart home
+
+* gathering data about the house
+  * temperature, humidity
+  * utilities data (water, gas, electricity)
+  * door bell usage...
+* controlling things around the house
+  * lights, fans, door opening
+* data awareness
+  * showing people inside and outside the house how we live
+* cool, fun learning project
+
+---
+
+# don't they already exist?
+
+<img src="/images/01dc71bae4d5468c9cc9bf62391ced08.jpg">
+
+---
+class: middle, center
+
+<img src="/images/ED-AY270_bkrvsu_JV_20190114131426.jpg">
+
+---
+
+<img src="/images/kanthaus-housebus-overview.png" style="width: 80%; margin-left: 100px;">
+
+---
+
 layout: false
 class: big
 # Join us!
