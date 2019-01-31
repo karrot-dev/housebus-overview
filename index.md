@@ -40,6 +40,10 @@ class: middle, center
 
 ---
 
+<img src="/images/housebus-layers.png" style="width: 80%; margin-left: 100px;">
+
+---
+
 layout: false
 class: big
 # Join us!
