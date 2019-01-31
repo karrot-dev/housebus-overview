@@ -95,6 +95,30 @@ bool fan_running
 ```
 
 ---
+
+# Our applications
+
+* influxdb writer
+  * python app, sends data to influxdb, read by https://grafana.yunity.org
+* internal web ui http://kanthaus-server
+  * lets you control attic fan speed
+* in progress
+  * RFID tag door opener
+  * solar battery charger data
+* vaguely related
+  * wifi and router data collection
+
+---
+
+# Ideas?
+
+* automate fan speed based on humidity?
+* open/close ventilation flaps based on humidity?
+* doorbell announcer?
+* thermostat controlled room heating controls?
+* e-ink displays around the house to show useful information?
+
+---
 layout: false
 class: big
 # Join us!
