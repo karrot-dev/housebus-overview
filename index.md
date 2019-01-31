@@ -3,11 +3,39 @@ class: center
 
 .big[Nick Sellen, Matthias Larisch]
 
---
 
-<div class="center" style="font-size: 50px; padding-top: 40px">
-  <span style="font-size: 180px; font-family: 'Cabin Sketch'; vertical-align: middle">?</span>
-</div>
+---
+
+# home automation / smart home
+
+* gathering data about the house
+  * temperature, humidity
+  * utilities data (water, gas, electricity)
+  * door bell usage...
+* controlling things around the house
+  * lights, fans, door opening
+* data awareness
+  * showing people inside and outside the house how we live
+* cool, fun learning project
+
+---
+
+# don't they already exist?
+
+<img src="/images/01dc71bae4d5468c9cc9bf62391ced08.jpg">
+
+---
+class: middle, center
+
+<img src="/images/ED-AY270_bkrvsu_JV_20190114131426.jpg">
+
+---
+
+<img src="/images/kanthaus-housebus-overview.png" style="width: 80%; margin-left: 100px;">
+
+---
+
+<img src="/images/housebus-layers.png" style="width: 80%; margin-left: 100px;">
 
 ---
 # Hardware
@@ -57,76 +85,16 @@ class: center
   * request / response messages
 
 
----
-
+* Example type definition: 
 ```
-#
-# Get or set a parameter by name or by index.
-# Note that access by index should only be used to retreive the list of parameters; it is higly
-# discouraged to use it for anything else, because persistent ordering is not guaranteed.
-#
-
-uint13 index
-
-# If set - parameter will be assigned this value, then the new value will be returned.
-# If not set - current parameter value will be returned.
-# Refer to the definition of Value for details.
-Value value
-uint8[<=92] name
-
----
-
-void5
-# Actual parameter value.
-Value value
-
-void5
-Value default_value    # Optional
-
-void6
-NumericValue max_value # Optional, not applicable for bool/string
-
-void6
-NumericValue min_value # Optional, not applicable for bool/string
-
-uint8[<=92] name
+uint3 brightness
+bool door_open
+bool person_inside
+bool private_mode
+bool fan_running
 ```
 
 ---
-
-# home automation / smart home
-
-* gathering data about the house
-  * temperature, humidity
-  * utilities data (water, gas, electricity)
-  * door bell usage...
-* controlling things around the house
-  * lights, fans, door opening
-* data awareness
-  * showing people inside and outside the house how we live
-* cool, fun learning project
-
----
-
-# don't they already exist?
-
-<img src="/images/01dc71bae4d5468c9cc9bf62391ced08.jpg">
-
----
-class: middle, center
-
-<img src="/images/ED-AY270_bkrvsu_JV_20190114131426.jpg">
-
----
-
-<img src="/images/kanthaus-housebus-overview.png" style="width: 80%; margin-left: 100px;">
-
----
-
-<img src="/images/housebus-layers.png" style="width: 80%; margin-left: 100px;">
-
----
-
 layout: false
 class: big
 # Join us!
